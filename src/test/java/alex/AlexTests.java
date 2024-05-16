@@ -1,4 +1,4 @@
-package alextest;
+package alex;
 import com.example.Alex;
 import com.example.Feline;
 import org.junit.Assert;
@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import java.util.List;
-public class AlexGetFriendsTest {
+public class AlexTests {
     Feline faline;
     @Before
     public void init() {
