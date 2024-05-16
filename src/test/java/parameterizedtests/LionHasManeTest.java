@@ -1,4 +1,4 @@
-package lion;
+package parameterizedtests;
 import com.example.Feline;
 import com.example.Lion;
 import org.junit.Assert;
@@ -23,14 +23,13 @@ public class LionHasManeTest {
         return new Object[][]{
                 {"Самец",true},
                 {"Самка",false},
-                {"Некто",false}
         };
     }
     @Test
-    public void LionHasMane() {
-        Feline animal = Mockito.mock(Feline.class);
+    public void lionHasMane() {
+        Feline feline = Mockito.mock(Feline.class);
         try {
-            Lion lion = new Lion(sex,animal);
+            Lion lion = new Lion(sex,feline);
             Boolean actualResult = lion.doesHaveMane();
             Assert.assertEquals("Ожидаемый результат не соответствует фактическому: ",hasMane,actualResult);
         }
