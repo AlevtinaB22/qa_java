@@ -26,16 +26,10 @@ public class LionHasManeTest {
         };
     }
     @Test
-    public void lionHasMane() {
+    public void lionHasMane() throws Exception {
         Feline feline = Mockito.mock(Feline.class);
-        try {
             Lion lion = new Lion(sex,feline);
             Boolean actualResult = lion.doesHaveMane();
             Assert.assertEquals("Ожидаемый результат не соответствует фактическому: ",hasMane,actualResult);
-        }
-        catch (Exception exception){
-            String message = exception.getMessage();
-            Assert.assertEquals("Используйте допустимые значения пола животного - самец или самка",message);
-        }
     }
 }
